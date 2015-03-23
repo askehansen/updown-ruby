@@ -24,7 +24,7 @@ Or install it yourself as:
 Set your API key
 
 ```ruby
-# config/initializers/awesomeness.rb
+# config/initializers/updown.rb
 Updown.configure do |config|
   config.api_key = 'your_api_key'
 end
