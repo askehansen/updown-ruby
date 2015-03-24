@@ -74,6 +74,11 @@ Delete a specific check:
 check.destroy
 ```
 
+## Todo
+
+- Write tests!
+- Error handling
+
 ## Contributing
 
 1. Fork it ( https://github.com/askehansen/updown/fork )
