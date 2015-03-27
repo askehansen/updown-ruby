@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["aske@deeco.dk"]
   spec.summary       = %q{Updown.io wrapper}
   spec.description   = %q{A wrapper for the Updown.io API}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/askehansen/updown-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
