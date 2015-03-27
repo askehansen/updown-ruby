@@ -1,9 +1,10 @@
 PATH
   remote: .
   specs:
-    updown (0.0.1)
+    updown (0.1.0)
       gem_config
       rest-client
+      thor
 
 GEM
   remote: https://rubygems.org/
@@ -15,6 +16,7 @@ GEM
     rest-client (1.7.3)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    thor (0.19.1)
 
 PLATFORMS
   ruby

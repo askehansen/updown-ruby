@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'thor'
+require 'yaml'
+require 'updown'
+require 'updown/cli'
+
+Updown::CLI.start(ARGV)

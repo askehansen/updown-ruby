@@ -74,6 +74,31 @@ Delete a specific check:
 check.destroy
 ```
 
+## Command Line
+
+This gem also comes with a few commands
+
+First, configure your API key:
+
+```
+$ updown configure YOUR_API_KEY
+```
+
+See the status of your checks:
+
+```
+$ updown status
+[up] https://google.com
+[up] https://bing.com
+```
+
+Add a new check:
+
+```
+$ updown add https://google.com
+```
+
+
 ## Todo
 
 - Write tests!
