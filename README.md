@@ -1,6 +1,6 @@
 # Updown
 
-A wrapper for the Updown.io API
+A Ruby wrapper and CLI for the [updown.io](https://updown.io) API
 
 ## Installation
 
@@ -10,14 +10,9 @@ Add this line to your application's Gemfile:
 gem 'updown'
 ```
 
-And then execute:
-
-    $ bundle
-
 Or install it yourself as:
 
     $ gem install updown
-
 
 ## Configuration
 
@@ -34,75 +29,85 @@ Updown.configuration.api_key = 'your_api_key'
 
 Or set the `UPDOWN_API_KEY` environment variable
 
+Find your API key in your [settings page](https://updown.io/settings/edit).
+
 ## Usage
 
 List all your checks:
 
 ```ruby
 Updown::Check.all
+# => [<Updown::Check>, <Updown::Check>, … ]
 ```
 
-See downtimes for a specific check:
+List downtimes for a specific check (paginated, 100 per call):
 
 ```ruby
 check.downtimes
+# => [<Updown::Downtime>, <Updown::Downtime>, … ]
+
+check.downtimes page: 2
+# => [<Updown::Downtime>]
 ```
 
 Create a new check:
 
 ```ruby
 Updown::Check.create 'https://google.com'
+# => <Updown::Check>
 ```
 
-You can also set `period` and `published`:
+You can also set any parameters allowed by the API, like `enabled`, `published`, `period` or `apdex_t`:
 
 ```ruby
 Updown::Check.create 'https://google.com', period: 30, published: true
+# => <Updown::Check>
+```
+
+In case of validation errors, an `Updown::Error` will be raised:
+
+```ruby
+Updown::Check.create 'https://google.com', period: 45
+# => Updown::Error: URL is already registered (given: "https://google.com"), Period is not included in the list (given: 45)
 ```
 
 Update a specific check:
 
 ```ruby
 check.update period: 30
+# => <Updown::Check>
 ```
-
-See more details about the options here: https://updown.io/api
 
 Delete a specific check:
 
 ```ruby
 check.destroy
+# => true
 ```
+
+Learn more about the API here: https://updown.io/api
 
 ## Command Line
 
-This gem also comes with a few commands
-
+This gem also comes with an `updown` shell command.
 First, configure your API key:
 
-```
-$ updown configure YOUR_API_KEY
-```
+    $ updown configure YOUR_API_KEY
 
 See the status of your checks:
 
-```
-$ updown status
-[up] https://google.com
-[up] https://bing.com
-```
+    $ updown status
+     [up]  rjis — https://google.com
+    [DOWN] bn94 — https://bing.com
+     [up]  qwer — http://stackoverflow.com
 
 Add a new check:
 
-```
-$ updown add https://google.com
-```
-
+    $ updown add https://google.com
 
 ## Todo
 
 - Write tests!
-- Error handling
 
 ## Contributing
 

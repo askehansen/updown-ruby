@@ -11,5 +11,5 @@ module Updown
   with_configuration do
     has :api_key, classes: String, default: ENV['UPDOWN_API_KEY'].to_s
   end
-  
+
 end

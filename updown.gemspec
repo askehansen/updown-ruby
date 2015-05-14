@@ -6,10 +6,10 @@ require 'updown/version'
 Gem::Specification.new do |spec|
   spec.name          = "updown"
   spec.version       = Updown::VERSION
-  spec.authors       = ["Aske Hansen"]
-  spec.email         = ["aske@deeco.dk"]
-  spec.summary       = %q{Updown.io wrapper}
-  spec.description   = %q{A wrapper for the Updown.io API}
+  spec.authors       = ["Aske Hansen", "Adrien Jarthon"]
+  spec.email         = ["aske@deeco.dk", "me@adrienjarthon.com"]
+  spec.summary       = %q{updown.io API wrapper}
+  spec.description   = %q{A wrapper for the updown.io API}
   spec.homepage      = "https://github.com/askehansen/updown-ruby"
   spec.license       = "MIT"
 
@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'rest-client'
   spec.add_dependency 'thor'
-
-  spec.add_runtime_dependency 'gem_config'
+  spec.add_dependency 'gem_config'
+  spec.add_dependency 'colorize'
 end

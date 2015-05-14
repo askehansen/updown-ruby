@@ -1,3 +1,7 @@
+require 'colorize'
+
+String.disable_colorization(true) if not STDOUT.isatty
+
 module Updown
   class CLI < Thor
 
@@ -6,9 +10,24 @@ module Updown
       configure_api_key
 
       Updown::Check.all.each do |check|
-        status = check.down ? 'DOWN' : 'up'
-        puts "[#{status}] #{check.url}"
+        status = if !check.enabled
+          ' ---- '.colorize(:light_black)
+        elsif check.down
+          '[DOWN]'.colorize(:light_red)
+        else
+          ' [up] '.colorize(:light_green)
+        end
+        url = if check.ssl_valid == true
+          check.url.sub('https', 'https'.colorize(:light_green))
+        elsif check.ssl_valid == false
+          check.url.sub('https', 'https'.colorize(:light_red))
+        else
+          check.url
+        end
+        puts "#{status} #{check.token.colorize(:light_magenta)} #{"—".colorize(:light_black)} #{url}"
       end
+    rescue Updown::Error => e
+      puts "Error: #{e}"
     end
 
     desc 'add URL [PERIOD]', 'add a new check'
@@ -17,6 +36,8 @@ module Updown
 
       check = Updown::Check.create url, period: period
       system "open https://updown.io/#{check.token}"
+    rescue Updown::Error => e
+      puts "Error: #{e}"
     end
 
     desc 'configure API_KEY', 'set your updown.io api key'
