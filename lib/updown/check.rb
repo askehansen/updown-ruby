@@ -1,3 +1,5 @@
+require 'time'
+
 module Updown
   class Check
     attr_accessor :token, :url, :last_status, :uptime, :down, :down_since, :error, :period, :apdex_t, :enabled, :published, :last_check_at, :next_check_at, :ssl_tested_at, :ssl_valid, :ssl_error
