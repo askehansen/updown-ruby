@@ -1,3 +1,8 @@
+### 0.2.2
+_2015-06-28_
+
+* Added support for the new 'alias' attribute (Check)
+
 ### 0.2.1
 _2015-05-20_
 

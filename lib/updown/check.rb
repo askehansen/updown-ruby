@@ -2,7 +2,7 @@ require 'time'
 
 module Updown
   class Check
-    attr_accessor :token, :url, :last_status, :uptime, :down, :down_since, :error, :period, :apdex_t, :enabled, :published, :last_check_at, :next_check_at, :ssl_tested_at, :ssl_valid, :ssl_error
+    attr_accessor :token, :url, :alias, :last_status, :uptime, :down, :down_since, :error, :period, :apdex_t, :enabled, :published, :last_check_at, :next_check_at, :ssl_tested_at, :ssl_valid, :ssl_error
 
     def self.all
       Updown::Call.checks.map do |check|
@@ -17,6 +17,7 @@ module Updown
     def initialize(json)
       @token         = json['token']
       @url           = json['url']
+      @alias         = json['alias']
       @last_status   = json['last_status']
       @enabled       = json['enabled']
       @period        = json['period']
