@@ -30,6 +30,13 @@ module Updown
       puts "Error: #{e}"
     end
 
+    desc 'open ID', 'Open the status page of a check'
+    def open(token)
+      configure_api_key
+      
+      system "open https://updown.io/#{token}"
+    end
+
     desc 'add URL [PERIOD]', 'add a new check with a default period of 60sec. Available periods are 30/60/120/300/600'
     def add(url, period=60)
       configure_api_key

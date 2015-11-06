@@ -101,6 +101,10 @@ See the status of your checks:
     [DOWN] bn94 — https://bing.com
      [up]  qwer — http://stackoverflow.com
 
+Open the status page of a check:
+
+    $ updown open rjis
+
 Add a new check:
 
     $ updown add https://google.com
