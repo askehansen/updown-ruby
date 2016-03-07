@@ -14,6 +14,10 @@ module Updown
       Check.new Updown::Call.create_check(attributes.merge(url: url))
     end
 
+    def self.get(token, attributes = {})
+      Check.new Updown::Call.get_check(token, attributes)
+    end
+
     def initialize(json)
       @token         = json['token']
       @url           = json['url']

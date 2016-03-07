@@ -40,6 +40,13 @@ Updown::Check.all
 # => [<Updown::Check>, <Updown::Check>, … ]
 ```
 
+Retrieve a specific check:
+
+```ruby
+Updown::Check.get check_token
+# => <Updown::Check>
+```
+
 List downtimes for a specific check (paginated, 100 per call):
 
 ```ruby

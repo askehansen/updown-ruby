@@ -21,6 +21,10 @@ module Updown
       process { Call.resource['checks'].post(attributes) }
     end
 
+    def self.get_check(token, attributes={})
+      process { Call.resource["checks/#{token}"].get(attributes) }
+    end
+
     def self.update_check(token, attributes={})
       process { Call.resource["checks/#{token}"].put(attributes) }
     end
