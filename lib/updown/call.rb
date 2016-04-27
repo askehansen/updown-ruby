@@ -37,7 +37,7 @@ module Updown
       JSON.parse yield
     rescue RestClient::BadRequest, RestClient::Unauthorized, RestClient::ResourceNotFound => e
       result = (JSON.parse(e.response) rescue {})
-      raise Updown::Error.new(result['error'] || e.reponse)
+      raise Updown::Error.new(result['error'] || e.response)
     end
 
   end
