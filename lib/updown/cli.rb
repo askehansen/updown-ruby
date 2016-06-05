@@ -33,7 +33,6 @@ module Updown
     desc 'open ID', 'Open the status page of a check'
     def open(token)
       configure_api_key
-      
       system "open https://updown.io/#{token}"
     end
 

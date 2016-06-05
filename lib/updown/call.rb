@@ -17,12 +17,16 @@ module Updown
       process { Call.resource["checks/#{token}/downtimes"].get(params: filters) }
     end
 
+    def self.metrics(token, filters={})
+      process { Call.resource["checks/#{token}/metrics"].get(params: filters) }
+    end
+
     def self.create_check(attributes={})
       process { Call.resource['checks'].post(attributes) }
     end
 
     def self.get_check(token, attributes={})
-      process { Call.resource["checks/#{token}"].get(attributes) }
+      process { Call.resource["checks/#{token}"].get(params: attributes) }
     end
 
     def self.update_check(token, attributes={})

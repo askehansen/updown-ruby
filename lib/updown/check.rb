@@ -2,7 +2,7 @@ require 'time'
 
 module Updown
   class Check
-    attr_accessor :token, :url, :alias, :last_status, :uptime, :down, :down_since, :error, :period, :apdex_t, :enabled, :published, :last_check_at, :next_check_at, :ssl_tested_at, :ssl_valid, :ssl_error
+    attr_accessor :token, :url, :alias, :last_status, :uptime, :down, :down_since, :error, :period, :apdex_t, :enabled, :published, :last_check_at, :next_check_at, :ssl_tested_at, :ssl_valid, :ssl_error, :metrics
 
     def self.all
       Updown::Call.checks.map do |check|
@@ -30,6 +30,7 @@ module Updown
       @uptime        = json['uptime']
       @down          = json['down']
       @error         = json['error']
+      @metrics       = json['metrics']
       @down_since    = Time.parse(json['down_since']) if json['down_since']
       @last_check_at = Time.parse(json['last_check_at']) if json['last_check_at']
       @next_check_at = Time.parse(json['next_check_at']) if json['next_check_at']
@@ -42,6 +43,10 @@ module Updown
 
     def downtimes page: 1
       Downtime.find(@token, page: page)
+    end
+
+    def get_metrics filters = {}
+      Updown::Call.metrics(@token, filters)
     end
 
     def update(attributes={})

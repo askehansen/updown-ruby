@@ -1,3 +1,9 @@
+### 0.4.0
+_2016-06-05_
+
+* Added support for the check/:token/metrics endpoint
+* Added support for the metrics parameter to the check/:token endpoint
+
 ### 0.2.2
 _2015-06-28_
 

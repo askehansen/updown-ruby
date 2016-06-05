@@ -45,6 +45,11 @@ Retrieve a specific check:
 ```ruby
 Updown::Check.get check_token
 # => <Updown::Check>
+
+# include performance metrics for the last hour
+check = Updown::Check.get check_token, metrics: true
+check.metrics
+# => {"apdex": 0.98, "requests": { … }, "timings": { … }}
 ```
 
 List downtimes for a specific check (paginated, 100 per call):
@@ -55,6 +60,27 @@ check.downtimes
 
 check.downtimes page: 2
 # => [<Updown::Downtime>]
+```
+
+Get detailed performance metrics for a specific check:
+
+```ruby
+# Default is for last month
+check.get_metrics
+# => {"apdex": 0.98, "requests": { … }, "timings": { … }}
+
+# Specify time span
+check.get_metrics from: 4.hours.ago, to: 2.hours.ago
+# => {"apdex": 1, "requests": { … }, "timings": { … }}
+
+# Specify grouping per location (:host) or hour (:time)
+check.get_metrics group: :host
+# => {
+#   "sgp" => {"apdex": 0.82, "host": { city: "Singapore", … }, … },
+#   "sfo" => {"apdex": 0.98, "host": { city: "San Francisco", … }, … },
+#   "alpha" => {"apdex": 0.98, "host": { city: "Montreal", … }, … },
+#   "gra" => {"apdex": 0.92, "host": { city: "Gravelines", … }, … }
+# }
 ```
 
 Create a new check:
