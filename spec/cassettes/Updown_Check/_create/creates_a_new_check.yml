@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://updown.io/api/checks
+    body:
+      encoding: UTF-8
+      string: url=https%3A%2F%2Fnews.ycombinator.com%2F
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Content-Length:
+      - '41'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:31:31 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '303'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 7a81c1bf-7653-40dd-9547-c986349308e0
+      Etag:
+      - W/"133465ea5c124bf77f8ad8bb4c7ca18f"
+      X-Runtime:
+      - '0.036205'
+      X-Powered-By:
+      - Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"token":"kx8w","url":"https://news.ycombinator.com/","alias":null,"last_status":null,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":60,"apdex_t":0.5,"string_match":null,"enabled":true,"published":false,"last_check_at":null,"next_check_at":"2017-12-10T15:31:31Z","favicon_url":null}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:31:31 GMT
+recorded_with: VCR 4.0.0

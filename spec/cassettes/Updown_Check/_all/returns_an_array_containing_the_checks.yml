@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://updown.io/api/checks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 11:00:17 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1087'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 4506f5a5-ac5c-4b89-a914-ea25d32a9be6
+      Etag:
+      - W/"2718a50c3ccfee47c68d1000ed1fb8c4"
+      X-Runtime:
+      - '0.046768'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '[{"token":"e4j4","url":"http://github.com","alias":"GitHub","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":120,"apdex_t":0.25,"string_match":"","enabled":true,"published":true,"last_check_at":"2017-12-10T10:58:36Z","next_check_at":"2017-12-10T11:00:36Z","favicon_url":"https://assets-cdn.github.com/favicon.ico"},{"token":"na7t","url":"http://google.com","alias":"","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":300,"apdex_t":0.5,"string_match":"","enabled":true,"published":false,"last_check_at":"2017-12-10T10:58:47Z","next_check_at":"2017-12-10T11:03:47Z","favicon_url":"http://www.google.ca/images/branding/product/ico/googleg_lodp.ico"},{"token":"qwew","url":"http://twitter.com","alias":"","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":600,"apdex_t":0.5,"string_match":"Welcome
+        to Twitter","enabled":false,"published":false,"last_check_at":"2017-12-10T10:04:32Z","next_check_at":"2017-12-10T10:14:32Z","favicon_url":"https://abs.twimg.com/favicons/favicon.ico"}]'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 11:00:17 GMT
+recorded_with: VCR 4.0.0

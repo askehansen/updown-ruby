@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://updown.io/api/checks/e4j4?metrics=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 14:24:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '477'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 760cb391-d4bc-449e-80a0-5053b82bdbab
+      Etag:
+      - W/"a035f716782663ee59ee4e992bd510ce"
+      X-Runtime:
+      - '0.037589'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"token":"e4j4","url":"http://github.com","alias":"GitHub","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":120,"apdex_t":0.25,"string_match":"","enabled":true,"published":true,"last_check_at":"2017-12-10T14:23:53Z","next_check_at":"2017-12-10T14:25:53Z","favicon_url":"https://assets-cdn.github.com/favicon.ico","metrics":{"apdex":0.937,"timings":{"redirect":158,"namelookup":1,"connection":67,"handshake":160,"response":125,"total":512}}}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 14:24:14 GMT
+recorded_with: VCR 4.0.0

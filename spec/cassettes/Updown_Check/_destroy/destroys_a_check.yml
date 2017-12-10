@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://updown.io/api/checks/jx3y
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:52:12 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '426'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 13f021d9-2186-41ea-97fb-62368a8d64d3
+      Etag:
+      - W/"e334771a44bd3a4374f21f58ebcc182f"
+      X-Runtime:
+      - '0.022372'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"token":"jx3y","url":"https://news.ycombinator.com/","alias":null,"last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":30,"apdex_t":0.5,"string_match":null,"enabled":true,"published":true,"last_check_at":"2017-12-10T15:51:58Z","next_check_at":"2017-12-10T15:52:28Z","favicon_url":"https://news.ycombinator.com/favicon.ico","ssl":{"tested_at":"2017-12-10T15:51:32Z","valid":true,"error":null}}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:52:12 GMT
+- request:
+    method: delete
+    uri: https://updown.io/api/checks/jx3y
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:52:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '16'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 34bc4f30-592c-48b6-b840-88749f9ec33f
+      Etag:
+      - W/"1b70b1c98c544d975c39049311ab1d24"
+      X-Runtime:
+      - '0.035012'
+      X-Powered-By:
+      - Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"deleted":true}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:52:13 GMT
+- request:
+    method: get
+    uri: https://updown.io/api/checks
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:52:15 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1086'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 5deecae4-26af-41de-9f50-b8479a093b63
+      Etag:
+      - W/"10ff2a42e55ac60543e1dbc153db062a"
+      X-Runtime:
+      - '0.033131'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - EXPIRED
+    body:
+      encoding: UTF-8
+      string: '[{"token":"e4j4","url":"http://github.com","alias":"GitHub","last_status":200,"uptime":99.99,"down":false,"down_since":null,"error":null,"period":30,"apdex_t":0.25,"string_match":"","enabled":true,"published":true,"last_check_at":"2017-12-10T15:52:03Z","next_check_at":"2017-12-10T15:52:33Z","favicon_url":"https://assets-cdn.github.com/favicon.ico"},{"token":"na7t","url":"http://google.com","alias":"","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":300,"apdex_t":0.5,"string_match":"","enabled":true,"published":false,"last_check_at":"2017-12-10T15:49:43Z","next_check_at":"2017-12-10T15:54:43Z","favicon_url":"http://www.google.ca/images/branding/product/ico/googleg_lodp.ico"},{"token":"qwew","url":"http://twitter.com","alias":"","last_status":200,"uptime":100.0,"down":false,"down_since":null,"error":null,"period":600,"apdex_t":0.5,"string_match":"Welcome
+        to Twitter","enabled":false,"published":false,"last_check_at":"2017-12-10T10:04:32Z","next_check_at":"2017-12-10T10:14:32Z","favicon_url":"https://abs.twimg.com/favicons/favicon.ico"}]'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:52:15 GMT
+recorded_with: VCR 4.0.0
