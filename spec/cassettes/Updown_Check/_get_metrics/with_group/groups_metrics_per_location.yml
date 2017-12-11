@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://updown.io/api/checks/e4j4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:16:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '349'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - d499143e-be29-4ddd-b35d-5352997a6ad6
+      Etag:
+      - W/"ad05f51c3f99f9770b63f8631f6c2020"
+      X-Runtime:
+      - '0.037230'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - EXPIRED
+    body:
+      encoding: UTF-8
+      string: '{"token":"e4j4","url":"http://github.com","alias":"GitHub","last_status":200,"uptime":99.99,"down":false,"down_since":null,"error":null,"period":15,"apdex_t":0.25,"string_match":"","enabled":true,"published":true,"last_check_at":"2017-12-10T15:16:33Z","next_check_at":"2017-12-10T15:16:48Z","favicon_url":"https://assets-cdn.github.com/favicon.ico"}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:16:42 GMT
+- request:
+    method: get
+    uri: https://updown.io/api/checks/e4j4/metrics?group=host
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:16:43 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2300'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 5fa6a9e0-be15-41d1-a317-10ecd39f9206
+      Etag:
+      - W/"460795d9072e882d14f3af0942fea193"
+      X-Runtime:
+      - '0.031219'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"gra":{"apdex":0.898,"timings":{"redirect":177,"namelookup":1,"connection":82,"handshake":182,"response":162,"total":604},"requests":{"samples":49,"failures":5,"satisfied":44,"tolerated":0,"by_response_time":{"under125":9,"under250":44,"under500":44,"under1000":44,"under2000":44,"under4000":44}},"host":{"ip":"51.255.166.16","city":"Gravelines","country":"France","country_code":"fr"}},"lan":{"apdex":0.948,"timings":{"redirect":75,"namelookup":1,"connection":28,"handshake":85,"response":146,"total":336},"requests":{"samples":48,"failures":2,"satisfied":45,"tolerated":1,"by_response_time":{"under125":1,"under250":45,"under500":46,"under1000":46,"under2000":46,"under4000":46}},"host":{"ip":"45.32.74.41","city":"Los
+        Angeles","country":"US","country_code":"us"}},"fra":{"apdex":0.911,"timings":{"redirect":202,"namelookup":1,"connection":90,"handshake":204,"response":160,"total":658},"requests":{"samples":56,"failures":5,"satisfied":51,"tolerated":0,"by_response_time":{"under125":0,"under250":51,"under500":51,"under1000":51,"under2000":51,"under4000":51}},"host":{"ip":"104.238.159.87","city":"Frankfurt","country":"Germany","country_code":"de"}},"bhs":{"apdex":1.0,"timings":{"redirect":44,"namelookup":0,"connection":15,"handshake":41,"response":65,"total":166},"requests":{"samples":40,"failures":0,"satisfied":40,"tolerated":0,"by_response_time":{"under125":39,"under250":40,"under500":40,"under1000":40,"under2000":40,"under4000":40}},"host":{"ip":"198.27.83.55","city":"Montreal","country":"Canada","country_code":"ca"}},"mia":{"apdex":0.963,"timings":{"redirect":66,"namelookup":1,"connection":28,"handshake":79,"response":85,"total":260},"requests":{"samples":54,"failures":2,"satisfied":52,"tolerated":0,"by_response_time":{"under125":51,"under250":52,"under500":52,"under1000":52,"under2000":52,"under4000":52}},"host":{"ip":"104.238.136.194","city":"Miami","country":"US","country_code":"us"}},"syd":{"apdex":0.439,"timings":{"redirect":479,"namelookup":1,"connection":224,"handshake":465,"response":333,"total":1504},"requests":{"samples":41,"failures":5,"satisfied":0,"tolerated":36,"by_response_time":{"under125":0,"under250":0,"under500":36,"under1000":36,"under2000":36,"under4000":36}},"host":{"ip":"45.63.29.207","city":"Sydney","country":"Australia","country_code":"au"}}}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:16:43 GMT
+recorded_with: VCR 4.0.0

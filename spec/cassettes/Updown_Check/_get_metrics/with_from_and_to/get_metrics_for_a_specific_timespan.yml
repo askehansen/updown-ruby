@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://updown.io/api/checks/e4j4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:11:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '349'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 40c0b273-b066-4b7b-878f-fea793a2df34
+      Etag:
+      - W/"372b91d40e184256d0590fb03550d245"
+      X-Runtime:
+      - '0.030560'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - EXPIRED
+    body:
+      encoding: UTF-8
+      string: '{"token":"e4j4","url":"http://github.com","alias":"GitHub","last_status":200,"uptime":99.99,"down":false,"down_since":null,"error":null,"period":15,"apdex_t":0.25,"string_match":"","enabled":true,"published":true,"last_check_at":"2017-12-10T15:11:33Z","next_check_at":"2017-12-10T15:11:48Z","favicon_url":"https://assets-cdn.github.com/favicon.ico"}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:11:45 GMT
+- request:
+    method: get
+    uri: https://updown.io/api/checks/e4j4/metrics?from=2017-12-10%2012:00:00%20%2B0100&to=2017-12-10%2014:00:00%20%2B0100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:11:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '293'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - public, max-age=30
+      Vary:
+      - X-Api-Key, Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - 53a75d9d-d1a5-4c83-91bb-552b5998ebbe
+      Etag:
+      - W/"09440c557198851a5d89b326793a838a"
+      X-Runtime:
+      - '0.033128'
+      X-Powered-By:
+      - Phusion Passenger
+      X-Proxy-Cache:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"apdex":0.917,"timings":{"redirect":170,"namelookup":1,"connection":77,"handshake":172,"response":142,"total":563},"requests":{"samples":60,"failures":0,"satisfied":50,"tolerated":10,"by_response_time":{"under125":19,"under250":50,"under500":60,"under1000":60,"under2000":60,"under4000":60}}}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:11:47 GMT
+recorded_with: VCR 4.0.0

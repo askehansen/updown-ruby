@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://updown.io/api/checks
+    body:
+      encoding: UTF-8
+      string: period=45&url=https%3A%2F%2Fnews.ycombinator.com%2F
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.3.1p112
+      X-Api-Key:
+      - ePXULY6xLJ5XixzUSybU
+      Content-Length:
+      - '51'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - updown.io
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 10 Dec 2017 15:38:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '120'
+      Connection:
+      - keep-alive
+      Status:
+      - 400 Bad Request
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Origin
+      Strict-Transport-Security:
+      - max-age=15552000
+      X-Request-Id:
+      - c1592446-8a6f-43d8-939f-1aca4b3e860b
+      X-Runtime:
+      - '0.035804'
+      X-Powered-By:
+      - Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"error":"URL is already registered (given: \"news.ycombinator.com/\"),
+        Period is not included in the list (given: 45)"}'
+    http_version:
+  recorded_at: Sun, 10 Dec 2017 15:38:36 GMT
+recorded_with: VCR 4.0.0
